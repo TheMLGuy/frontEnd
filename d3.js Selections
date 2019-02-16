@@ -1,0 +1,18 @@
+Selections are used to operate on selected elements on a web page.
+Can access an element by using select() or selectAll(), once selected can modify, append or remove elements.
+select()-> selects the first element that matches the query
+selectAll->selects all elements that match the query 
+
+An example:
+<html>
+  <head>
+    <script type="Javascript" src="cdn url"></script>
+  </head>
+  <body>
+    <div class="mydiv">
+    </div>
+   <script>d3.select("mydiv")</script>
+  </body>
+ This will select mydiv div element and will perform an operation like modify/add/remove and so on.
+ D3 functions use dot notations and chain syntaxm so its easy to keep adding functions as long as they are relevant to the object.
+ Can add content to an existing dom element by using append. 
