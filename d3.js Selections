@@ -21,5 +21,9 @@ append creates new content ex: d3.select("mydiv").append("span") this just appen
 To add text, after append, call text("text added"), then span tag has text element attached to it.
 attribute works on a property of that element ex: attr("style", "color:green") changes style attribute color to green
 style works on the css properties only ex: style("color":'green')
-
+Classed(): this is to set the class attribute of an element
+  select an element check if it belongs to a class, or add it to a class or remove it from an existing one
+  d3.select("element").classed("classname", true) then add element to classname, if set to false, then remove from classname
+  wanna check if it belongs to a class, just use .classed("classname"), no need to add second parameter
+  
 
