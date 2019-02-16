@@ -1,1 +1,37 @@
 
+D3 js Datajoin gives priority to data elements and each element in the dataset corresponds to an element in HTML.
+This works along with selections.
+Bottomline manipulation of elements in HTML is made easier with respect to data elements using data joins.
+Suppose an html doc contains two elements that are to be mapped to a dataset of 10 elements. Then using d3's select method
+d3.selectAll("tag").data([dataset's elements])
+This means current selected elements get mapped to each element of dataset in an enumerated fashion, what if we want to 
+other 8 elements to also show up on the webpage dynamically based on dataset. Use enter() and append() function of d3 datajoin.
+d3.selectAll("tag").data([dataset's elements]).enter().append("tag to be repeated").text("its text")
+Text function can take a function as argument, text(function(d)) {return 'Dynamically created element';};
+suppose dataset had 5 elements and 3 of them were dynamically created. To remove an element, just use exit().remove() by 
+changing the dataset that was earlier given.
+
+Additional methods that are used in datajoins:
+datum(), data(), enter() and exit()
+datum is used to set a single element with a value
+
+<html>
+	<head>
+	<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+	</head>
+	<body>
+		<div id="divid">
+			<p>Just another paragraph</p>
+		</div>
+		<script>
+		d3.selectAll("div").datum('Ashwin').text(function(d) {
+		return "This text segment is brought to you by "+d;
+		});
+		</script>
+		
+	
+	
+	
+	</body>
+</html>
+An example that uses datum()
