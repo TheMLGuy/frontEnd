@@ -1,0 +1,11 @@
+Transformation of SVG elements involve translate, scale, rotate and skew operations.
+Translation operation requires 2 parameters that define how the svg element has to be translated along the x axis and y axis.
+Scale operation requires 2 parameters like translation, defines what is the scaling factor along x and y axis.
+Rotate operation requires rotation angle, center of rotation in x and y axis.
+Skewx and skewy take a single parameter that defines skew angle along x and y axis respectively.
+'g' tag is used to define a svg group of elements.
+Can apply any of the above transformations to group of elements as well.
+Transformation can be applied sequentially too just by separating them by whitespace.
+
+These functions and attributes can be called in d3 as well although there exists a library that can be referenced too 
+which is called d3-transform.js, when this is included in the script src tag, we can directly call transofrm, rotate and other functions.
