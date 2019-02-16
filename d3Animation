@@ -1,0 +1,6 @@
+Duration vs delay
+Duration helps us to specify how smoothly should the transition happen, suppose duration(5000) is specified, then the 
+transition will kick in for the whole duration of 5sec. It will be smooth.
+Delay is to make the transition appear after a certain time mentioned, that is delay(5000) means after 5secs the transition will just appear.
+4 life phases of transition:
+schedule, start transition, running the transition and end the transition
