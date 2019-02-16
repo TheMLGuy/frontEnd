@@ -71,3 +71,9 @@ Data() method
 	
 	</body>
 </html>
+___________________________________________________________________________________________________________
+enter() method is for adding html elements for which data element exists and no graphical/html elements do not exist.
+exit() acts as a limiter by returning only the elements corresponding to the reduced dataset. Need to check other usecases.
+text(function(d,i){
+d refers to the value and i refers to text
+})
