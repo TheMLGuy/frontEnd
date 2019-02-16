@@ -1,3 +1,18 @@
-https://www.tutorialspoint.com/d3js/d3js_introduction_to_svg.htm
-expand this
-circle, line, rect, ellipse
+SVG stands for scalable vector graphics.
+SVG is an XML based graphic rendering tenchnique.Can draw line, circle, ellipse, rectangle and so on.
+It has a tag called <svg> with which we get to define attributes like height, width and so on and some properties that are relevant to a
+geometric construct. SVG elements can be included in html and their locations are relative to the origin(0,0).
+For a line:
+  First define an svg canvas/image where line will be drawn
+  Second use the relevant tag name for the image to be rendered
+  <svg width="300" height="300">
+  
+    <line x1="100" x2="100" y1="200" y2="200" style="stroke:rgb(255,0,0); stroke-width:2"></line>
+  
+  </svg>
+  This means in a svg image 300x300, a line from coordinates (100,100) to (200,200) is drawn with width 2 and whose color is (255,0,0)
+  
+  The above code can be used in d3 in a much more simpler dot notation
+    Just create a div for storing the svg attribute, then use d3 to 'append' svg and add attributes using 'attr', finally 
+    store the svg into a var and then to create a line tag, just append line too svg variable and go on creating required attributes.
+    
