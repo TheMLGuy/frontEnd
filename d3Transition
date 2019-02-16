@@ -1,0 +1,7 @@
+Transition is used to cause a change in state for an element.
+It does not support data and append methods, but supports most of the selectors.
+Has its own functions like ease, duration and so on.
+Any append or data methods have to be called before transition.
+
+For instance, if <body>'s color has to be changed upon loading but not immediately can specify a duration(x) xms and the color will change
+as per the style attribute mentioned.
