@@ -35,3 +35,39 @@ datum is used to set a single element with a value
 	</body>
 </html>
 An example that uses datum()
+__________________________________________________________________________________________________________
+Data() method
+<html>
+	<head>
+	<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+	</head>
+	<body>
+		<div id="divid">
+			<p>Just another paragraph</p>
+		</div>
+		<ul id="list">
+			<li></li>
+			<li></li>
+		</ul>
+		<script>
+		d3.select("#divid").datum('Ashwin').text(function(d) {
+		return "This text segment is brought to you by "+d;
+		});
+		
+		d3.selectAll("#list").selectAll("li").data([1,2,3,4,5])
+		.text(function(d) {
+		return "data element "+d+" added";
+		})
+		.enter()
+		.append("li")
+		.text(function(d) {
+		return "extra data element "+d+" added";
+		});
+		
+		</script>
+		
+	
+	
+	
+	</body>
+</html>
