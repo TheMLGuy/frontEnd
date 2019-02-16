@@ -16,3 +16,10 @@ An example:
  This will select mydiv div element and will perform an operation like modify/add/remove and so on.
  D3 functions use dot notations and chain syntaxm so its easy to keep adding functions as long as they are relevant to the object.
  Can add content to an existing dom element by using append. 
+Ways to select id is using #, to select class name is using ".classname", to select any other element's tag "tagname"
+append creates new content ex: d3.select("mydiv").append("span") this just appends span open n close tag
+To add text, after append, call text("text added"), then span tag has text element attached to it.
+attribute works on a property of that element ex: attr("style", "color:green") changes style attribute color to green
+style works on the css properties only ex: style("color":'green')
+
+
