@@ -1,0 +1,23 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+//new element
+/*
+This is a jsx virtual dom element. Still needs to be rendered using ReactDom
+*/
+const element=<h1>hello world</h1>;
+console.log(element);
+
+//hot module reloading refers to REACT responding to changing states and 
+//updating DOM accordingly
+
+ReactDOM.render(element, document.getElementById('root'));
+//render method's first argument is the component(defined by a jsx)
+//that needs to be rendered and second argument specifies which location 
+//should the element be placed into.
+
+//in this example, we have one element being rendered under root
+//but in a larger example or a real world use case, there will be a tree
+//of components that need to be rendered.
+
+
