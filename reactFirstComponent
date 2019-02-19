@@ -1,0 +1,18 @@
+import React, { Component } from "react";
+class Counter extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello World, coming in from app.js</h1>
+        <button>Just a button</button>
+      </div>
+    );
+  }
+  /*
+    Suppose I need to add more tags to my existing jsx, I will wrap the extra
+     tags with a div, else babel does not understand that tags are different and would 
+     throw an error saying a parent element needs to be present.
+    */
+}
+
+export default Counter;
