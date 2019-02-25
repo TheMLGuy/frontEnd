@@ -22,10 +22,12 @@ class Counter extends Component {
     console.log("Increment has been clicked " + this.state.count);
   }
   */
-  incrementClick = () => {
+  incrementClick = product => {
+    console.log(product);
     this.setState({ count: (this.state.count += 1) });
     console.log("Increment clicked ", this.state.count);
   };
+
   /*
   calling incrementClick does not work resulting in an exception because this is undefined
   One approach is to bind the 'this' variable in a constructor. This is a slightly inefficienct approach considering that
@@ -41,7 +43,9 @@ class Counter extends Component {
           {this.formatCount()}
         </span>
         <button
-          onClick={this.incrementClick}
+          onClick={() => {
+            this.incrementClick({ id: 1 });
+          }}
           className="btn btn-secondary btn-sm"
         >
           Just a button
