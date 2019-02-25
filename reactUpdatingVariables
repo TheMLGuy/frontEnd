@@ -23,7 +23,7 @@ class Counter extends Component {
   }
   */
   incrementClick = () => {
-    this.state.count += 1;
+    this.setState({ count: (this.state.count += 1) });
     console.log("Increment clicked ", this.state.count);
   };
   /*
@@ -31,6 +31,7 @@ class Counter extends Component {
   One approach is to bind the 'this' variable in a constructor. This is a slightly inefficienct approach considering that
   every event handler has to be handled manually
   So use a arrow approach to bind event handlers much cleaner approach
+  If DOM has to be updated to place the new updated state value then use setState() function.
   */
 
   render() {
