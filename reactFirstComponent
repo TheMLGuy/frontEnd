@@ -1,12 +1,23 @@
 import React, { Component } from "react";
 class Counter extends Component {
+  state = {
+    count: 1
+  };
+  /*
+  State can be used to hold data that a component needs
+  */
   render() {
     return (
       <React.Fragment>
-        <h1>Hello World, coming in from app.js</h1>
+        <span>{this.formatCount()}</span>
         <button>Just a button</button>
       </React.Fragment>
     );
+  }
+
+  formatCount() {
+    const { count } = this.state;
+    return count == 0 ? "Zero" : count;
   }
   /*
     Suppose I need to add more tags to my existing jsx, I will wrap the extra
