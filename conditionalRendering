@@ -1,1 +1,33 @@
 
+import React, { Component } from "react";
+class ConditionalRendering extends Component {
+  state = {
+    count: 0,
+    tags: ["tag1", "tag2", "tag3"]
+  };
+  styles = {
+    fontWeight: "bold",
+    fontSize: 50
+  };
+  /*
+  State can be used to hold data that a component needs
+  */
+  renderTags() {
+    if (this.state.tags.length == 0) return <p>No tags bitch</p>;
+    return (
+      <ul>
+        {this.state.tags.map(tag => (
+          <li key={tag}>{tag}</li>
+        ))}
+      </ul>
+    );
+  }
+  render() {
+    return <React.Fragment>{this.renderTags()}</React.Fragment>;
+  }
+}
+/*
+Conditional rendering is all about chaining up logic decisions with logic operators like && and ||.
+*/
+
+export default ConditionalRendering;
