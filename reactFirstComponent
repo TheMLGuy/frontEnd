@@ -2,16 +2,21 @@ import React, { Component } from "react";
 class Counter extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <h1>Hello World, coming in from app.js</h1>
         <button>Just a button</button>
-      </div>
+      </React.Fragment>
     );
   }
   /*
     Suppose I need to add more tags to my existing jsx, I will wrap the extra
      tags with a div, else babel does not understand that tags are different and would 
      throw an error saying a parent element needs to be present.
+    */
+
+  /*
+    Can use REACT.FRAGMENT to ensure that the extraneous div is not considered as 
+    a dom element. This can be a performance improvement when the DOM tree is deeply nested.
     */
 }
 
